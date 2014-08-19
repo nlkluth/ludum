@@ -11,3 +11,26 @@
 /*.userprefs
 /*.pidb
 /*.booproj
+
+#NOTE: this will cause your collaborators to re-import assets periodically
+ludum/Library/*
+ludum/Build/*
+ludum/Temp/*
+#Un-ignore these specific files
+!ludum/Library/*.asset
+!ludum/Library/AssetImportState
+!ludum/Library/AssetVersioning.db
+!ludum/Library/BuildPlayer.prefs
+!ludum/Library/ScriptMapper
+!ludum/Library/assetservercachev3
+!ludum/Library/expandedItems
+!ludum/Library/guidmapper
+!ludum/Library/unity default resources
+!ludum/Library/unity editor resources
+!ludum/Library/metadata/
+
+
+#ignoring pidb, they are just code completion caching data according to:
+# http://stackoverflow.com/questions/1022111/what-are-monodevelops-pidb-files
+*.pidb
+*.userprefs
