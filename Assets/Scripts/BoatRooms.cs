@@ -22,11 +22,6 @@ public class BoatRooms : MonoBehaviour
 	{
 		Camera OverlayCamera = GameObject.FindGameObjectWithTag("OverlayCamera").GetComponent<Camera>();
 		var mousePosition = OverlayCamera.ScreenToWorldPoint(Input.mousePosition);
-		Collider2D overlap = Physics2D.OverlapPoint(mousePosition);
-		if (overlap)
-		{
-			Debug.Log ("HIT");
-		}
 		
 		foreach (GameObject crewmember in _crewMembers)
 		{

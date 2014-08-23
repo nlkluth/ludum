@@ -15,8 +15,7 @@ public class CrewMember : MonoBehaviour
 	{
 		if (_isMoving && transform.position != _mousePosition)
 		{
-
-			transform.position = Vector3.MoveTowards(transform.position, _mousePosition, speed * Time.deltaTime);
+			transform.position = _mousePosition;
 
 		}
 
@@ -47,6 +46,6 @@ public class CrewMember : MonoBehaviour
 	public void MoveToMousePosition(Vector3 mousePosition)
 	{
 		_isMoving = true;
-		_mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+		_mousePosition = mousePosition;
 	}
 }
