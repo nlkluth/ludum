@@ -2,6 +2,10 @@
 using System.Collections;
 
 public class Overlay : MonoBehaviour {
+	public Transform overlayCamera;
+	public float locationX;
+	public float locationY;
+
 	private bool open = false;
 
 	void OnMouseDown()
@@ -11,7 +15,6 @@ public class Overlay : MonoBehaviour {
 
 	void Update()
 	{
-		if (Input.GetKeyDown (KeyCode.F)) 
 		{
 			openOrCloseOverlay();
 		}
