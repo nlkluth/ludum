@@ -10,10 +10,17 @@ public class BoatRooms : MonoBehaviour
 		_crewMembers = GameObject.FindGameObjectsWithTag("CrewMember");
 	}
 
-	void OnMouseDown()
+	void Update()
+	{
+		if (Input.GetMouseButtonDown(1))
+		{
+			MoveCrewToRoom();
+		}
+	}
+
+	private void MoveCrewToRoom()
 	{
 		var mousePosition = Input.mousePosition; 
-		Debug.Log ("click!");
 
 		foreach (GameObject crewmember in _crewMembers)
 		{
