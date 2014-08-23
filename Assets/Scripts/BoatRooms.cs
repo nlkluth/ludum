@@ -7,7 +7,7 @@ public class BoatRooms : MonoBehaviour
 
 	void Start()
 	{
-		_crewMembers = GameObject.FindGameObjectsWithTag("crewMember");
+		_crewMembers = GameObject.FindGameObjectsWithTag("CrewMember");
 	}
 
 	void OnMouseDown()

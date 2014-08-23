@@ -3,7 +3,7 @@
 --- !u!78 &1
 TagManager:
   tags:
-  - crewMember
+  - CrewMember
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -45,4 +45,8 @@ TagManager:
   - name: Player
     userID: 1
     uniqueID: 2857843143
+    locked: 0
+  - name: Overlay
+    userID: 2
+    uniqueID: 3664366563
     locked: 0
