@@ -10,6 +10,14 @@ public class CrewMember : MonoBehaviour
 
 	private bool _isMoving = false;
 	private Vector3 _mousePosition;
+	private GameObject[] _crewMembers;
+	private SpriteRenderer _spriteRender;
+
+	void Start()
+	{
+		_crewMembers = GameObject.FindGameObjectsWithTag("CrewMember");
+		_spriteRender = gameObject.GetComponent<SpriteRenderer>();
+	}
 
 	void Update()
 	{
@@ -23,6 +31,15 @@ public class CrewMember : MonoBehaviour
 		{
 			_isMoving = false;
 		}
+
+		if (!isSelected)
+		{
+			_spriteRender.sprite = deselectedSprite;
+		}
+		else
+		{
+			_spriteRender.sprite = selectedSprite;
+		}
 	}
 
 	void OnMouseDown()
@@ -32,15 +49,12 @@ public class CrewMember : MonoBehaviour
 
 	private void showSelect()
 	{
-		var spriteRender = gameObject.GetComponent<SpriteRenderer>();
-		isSelected = !isSelected;
-
-		if (!isSelected)
+		foreach(GameObject crewmember in _crewMembers)
 		{
-			spriteRender.sprite = deselectedSprite;
-			return;
+			var crewScript = crewmember.GetComponent<CrewMember>();
+			crewScript.isSelected = false;
 		}
-		spriteRender.sprite = selectedSprite;
+		isSelected = !isSelected;
 	}
 
 	public void MoveToMousePosition(Vector3 mousePosition)
