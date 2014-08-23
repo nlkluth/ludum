@@ -6,6 +6,7 @@ public class CrewMember : MonoBehaviour
 	public bool isSelected;
 	public Sprite selectedSprite;
 	public Sprite deselectedSprite;
+	public float speed;
 
 	private bool _isMoving = false;
 	private Vector3 _mousePosition;
@@ -14,7 +15,9 @@ public class CrewMember : MonoBehaviour
 	{
 		if (_isMoving && transform.position != _mousePosition)
 		{
-			transform.position = _mousePosition;
+
+			transform.position = Vector3.MoveTowards(transform.position, _mousePosition, speed * Time.deltaTime);
+
 		}
 
 		if (_isMoving && transform.position == _mousePosition)
@@ -44,6 +47,6 @@ public class CrewMember : MonoBehaviour
 	public void MoveToMousePosition(Vector3 mousePosition)
 	{
 		_isMoving = true;
-		_mousePosition = mousePosition;
+		_mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 	}
 }
