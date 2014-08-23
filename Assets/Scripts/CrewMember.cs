@@ -5,6 +5,22 @@ public class CrewMember : MonoBehaviour
 {
 	public bool isSelected;
 
+	private bool _isMoving = false;
+	private Vector2 _mousePosition;
+
+	void Update()
+	{
+		if (_isMoving && transform.position != _mousePosition)
+		{
+			transform.position = _mousePosition;
+		}
+
+		if (_isMoving && transform.position == _mousePosition)
+		{
+			_isMoving = false;
+		}
+	}
+
 	void OnMouseDown()
 	{
 		showSelect();
@@ -18,7 +34,7 @@ public class CrewMember : MonoBehaviour
 
 	public void MoveToMousePosition(Vector2 mousePosition)
 	{
-		Debug.Log ("clicked");
-		Debug.Log (mousePosition);
+		_isMoving = true;
+		_mousePosition = mousePosition;
 	}
 }
