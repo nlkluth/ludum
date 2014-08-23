@@ -1,31 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Overlay : MonoBehaviour {
+public class Overlay : MonoBehaviour
+{
 	public Transform overlayCamera;
 	public float locationX;
 	public float locationY;
 
-	private bool open = false;
+	private bool _open = false;
+	private Transform _boatOverlay;
 
 	void OnMouseDown()
 	{
-		openOrCloseOverlay();
+		OpenOrCloseOverlay();
 	}
 
 	void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.F)) 
 		{
-			openOrCloseOverlay();
+			OpenOrCloseOverlay();
 		}
 	}
 
-	private void openOrCloseOverlay()
+	private void OpenOrCloseOverlay()
 	{
-		open = !open;
+		_open = !_open;
 
-		if (open)
+		if (_open)
 		{
 			Instantiate(overlayCamera, new Vector2(locationX, locationY), Quaternion.identity);
 			return;
