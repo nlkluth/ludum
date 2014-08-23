@@ -30,7 +30,6 @@ public class Overlay : MonoBehaviour
 		if (_open)
 		{
 			_boatOverlay = Instantiate(overlayCamera, new Vector2(locationX, locationY), Quaternion.identity) as Transform;
-			_boatOverlay.name = "boatoverlay";
 			return;
 		}
 
