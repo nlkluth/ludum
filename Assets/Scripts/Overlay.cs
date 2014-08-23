@@ -15,6 +15,7 @@ public class Overlay : MonoBehaviour {
 
 	void Update()
 	{
+		if (Input.GetKeyDown(KeyCode.F)) 
 		{
 			openOrCloseOverlay();
 		}
@@ -26,6 +27,7 @@ public class Overlay : MonoBehaviour {
 
 		if (open)
 		{
+			Instantiate(overlayCamera, new Vector2(locationX, locationY), Quaternion.identity);
 			return;
 		}
 	}
