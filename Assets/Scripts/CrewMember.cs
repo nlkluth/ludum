@@ -6,7 +6,7 @@ public class CrewMember : MonoBehaviour
 	public bool isSelected;
 
 	private bool _isMoving = false;
-	private Vector2 _mousePosition;
+	private Vector3 _mousePosition;
 
 	void Update()
 	{
@@ -32,7 +32,7 @@ public class CrewMember : MonoBehaviour
 		Debug.Log ("add selected look");
 	}
 
-	public void MoveToMousePosition(Vector2 mousePosition)
+	public void MoveToMousePosition(Vector3 mousePosition)
 	{
 		_isMoving = true;
 		_mousePosition = mousePosition;
