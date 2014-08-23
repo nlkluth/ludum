@@ -4,6 +4,8 @@ using System.Collections;
 public class CrewMember : MonoBehaviour 
 {
 	public bool isSelected;
+	public Sprite selectedSprite;
+	public Sprite deselectedSprite;
 
 	private bool _isMoving = false;
 	private Vector3 _mousePosition;
@@ -28,8 +30,15 @@ public class CrewMember : MonoBehaviour
 
 	private void showSelect()
 	{
-		isSelected = true;
-		Debug.Log ("add selected look");
+		var spriteRender = gameObject.GetComponent<SpriteRenderer>();
+		isSelected = !isSelected;
+
+		if (!isSelected)
+		{
+			spriteRender.sprite = deselectedSprite;
+			return;
+		}
+		spriteRender.sprite = selectedSprite;
 	}
 
 	public void MoveToMousePosition(Vector3 mousePosition)
