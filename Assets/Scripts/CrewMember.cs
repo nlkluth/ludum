@@ -6,7 +6,7 @@ public class CrewMember : MonoBehaviour
 	public bool isSelected;
 	public Sprite selectedSprite;
 	public Sprite deselectedSprite;
-	public float speed;
+	public float time;
 
 	private bool _isMoving = false;
 	private Vector3 _mousePosition;
@@ -15,7 +15,7 @@ public class CrewMember : MonoBehaviour
 	{
 		if (_isMoving && transform.position != _mousePosition)
 		{
-			transform.position = _mousePosition;
+			transform.position = Vector2.Lerp(transform.position, _mousePosition, time * Time.deltaTime);
 
 		}
 
