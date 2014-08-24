@@ -10,7 +10,7 @@ public class CrewMember : MonoBehaviour
 
 	private bool _isMoving = false;
 	private Vector3 _mousePosition;
-	private GameObject[] _crewMembers;
+	private static GameObject[] _crewMembers;
 	private SpriteRenderer _spriteRender;
 
 	void Start()
@@ -49,11 +49,7 @@ public class CrewMember : MonoBehaviour
 
 	private void showSelect()
 	{
-		foreach(GameObject crewmember in _crewMembers)
-		{
-			var crewScript = crewmember.GetComponent<CrewMember>();
-			crewScript.isSelected = false;
-		}
+		DeselectCrew();
 		isSelected = !isSelected;
 	}
 
@@ -61,5 +57,14 @@ public class CrewMember : MonoBehaviour
 	{
 		_isMoving = true;
 		_mousePosition = mousePosition;
+	}
+
+	public static void DeselectCrew()
+	{
+		foreach(GameObject crewmember in _crewMembers)
+		{
+			var crewScript = crewmember.GetComponent<CrewMember>();
+			crewScript.isSelected = false;
+		}
 	}
 }

@@ -33,5 +33,6 @@ public class Overlay : MonoBehaviour
 		}
 
 		BoatOverlay.DestroyOverlay();
+		CrewMember.DeselectCrew();
 	}
 }
