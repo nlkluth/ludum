@@ -3,8 +3,11 @@ using System.Collections;
 
 public class BoatOverlay : MonoBehaviour
 {
-	public void DestroyOverlay()
+	private static GameObject _boatOverlay;
+
+	public static void DestroyOverlay()
 	{
-		Destroy(this.gameObject);
+		_boatOverlay = GameObject.FindGameObjectWithTag("OverlayCamera");
+		GameObject.Destroy(_boatOverlay);
 	}
 }
