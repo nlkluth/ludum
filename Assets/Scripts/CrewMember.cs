@@ -23,7 +23,7 @@ public class CrewMember : MonoBehaviour
 	{
 		if (_isMoving && transform.position != _mousePosition)
 		{
-			transform.position = Vector2.Lerp(transform.position, _mousePosition, time * Time.deltaTime);
+			transform.position = Vector2.Lerp(transform.position, _mousePosition, time * Time.time);
 
 		}
 
