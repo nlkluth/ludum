@@ -8,7 +8,6 @@ public class Overlay : MonoBehaviour
 	public float locationY;
 
 	private bool _open = false;
-	private Transform _boatOverlay;
 
 	void OnMouseDown()
 	{
@@ -29,10 +28,10 @@ public class Overlay : MonoBehaviour
 
 		if (_open)
 		{
-			_boatOverlay = Instantiate(overlayCamera, new Vector2(locationX, locationY), Quaternion.identity) as Transform;
+			Instantiate(overlayCamera, new Vector2(locationX, locationY), Quaternion.identity);
 			return;
 		}
 
-		_boatOverlay.GetComponent<BoatOverlay>().DestroyOverlay();
+		BoatOverlay.DestroyOverlay();
 	}
 }
