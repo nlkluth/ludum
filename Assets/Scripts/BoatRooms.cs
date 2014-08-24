@@ -29,7 +29,14 @@ public class BoatRooms : MonoBehaviour
 	
 	private void MoveCrewToRoom()
 	{
-		Camera OverlayCamera = GameObject.FindGameObjectWithTag("OverlayCamera").GetComponent<Camera>();
+		GameObject FindOverlayCamera = GameObject.FindGameObjectWithTag("OverlayCamera");
+		if (FindOverlayCamera == null)
+		{
+			return;
+		}
+
+		Camera OverlayCamera = FindOverlayCamera.GetComponent<Camera>();
+
 		var mousePosition = OverlayCamera.ScreenToWorldPoint(Input.mousePosition);
 
 		if (mousePosition.x > _transform.position.x + bounds.xMax || mousePosition.x < _transform.position.x - bounds.xMax ||
