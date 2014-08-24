@@ -21,23 +21,17 @@ public class Enemy : MonoBehaviour {
 		if (collider.tag == "Player")
 		{
 			_target = collider.transform;
-			_cruising = false;
+			speed = speed / 2;
 		}
 	}
 	
 	void Update () 
 	{
-		if (_cruising)
+		if (_target != null && Vector3.Distance(_target.position, localTransform.position) <= maxDistance)
 		{
-			transform.Translate(Vector3.right * Time.deltaTime * speed);
-			return;
+			speed = speed / 2;
 		}
 
-		localTransform.rotation = Quaternion.Slerp(localTransform.rotation, Quaternion.LookRotation(_target.position - localTransform.position), rotationSpeed * Time.deltaTime);
-		
-		if (Vector3.Distance(_target.position, localTransform.position) > maxDistance)
-		{
-			localTransform.position += localTransform.forward * speed * Time.deltaTime;
-		}
+		localTransform.Translate (Vector3.right * Time.deltaTime * speed);
 	}
 }
