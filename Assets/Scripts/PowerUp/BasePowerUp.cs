@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-
-public class BasePowerUp
+﻿public class BasePowerUp
 {
 	public string Name { get; set; }
 	public int ActionPoints { get; set; }
@@ -20,5 +17,6 @@ public enum PowerUpType
 	Weapon,
 	Armor,
 	Special,
+	Speed,
 	None
 }
