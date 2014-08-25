@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour {
 	
 	private Transform _target;
 	private Transform localTransform;
-	private bool _cruising = true;
 	
 	void Awake()
 	{
