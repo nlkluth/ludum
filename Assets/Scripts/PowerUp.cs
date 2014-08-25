@@ -1,12 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[System.Serializable]
-public class PowerUpType
-{
-
-}
-
 public class PowerUp : MonoBehaviour
 {
 	public PowerUpType powerUp;
