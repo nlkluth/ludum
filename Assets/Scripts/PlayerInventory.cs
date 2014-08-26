@@ -1,10 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerInventory : MonoBehaviour 
+public class PlayerInventory : MonoBehaviour
 {
+	public Player player;
+	public int SpecialCount { get; set; }
+
 	public void AddPowerUp(PowerUpType powerUp)
 	{
-		Debug.Log ("Got powerup");
+		if (powerUp == PowerUpType.Special)
+    		{
+		      	return SpecialCount++;
+		}
+
+    		player.IncreaseStat(powerUp);
 	}
 }
