@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PowerUp : MonoBehaviour
 {
-	public PowerUpType powerUp;
+	public PowerUpType PowerUp { get; set; }
 
 	private GameObject player;
 	private PlayerInventory playerInventory;
@@ -18,7 +18,7 @@ public class PowerUp : MonoBehaviour
 	{
 		if (collider.tag == "Player")
 		{
-			playerInventory.AddPowerUp(this.powerUp);
+			playerInventory.AddPowerUp(this.PowerUp);
 			Destroy(gameObject);
 		}
 	}
