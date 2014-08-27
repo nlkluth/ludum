@@ -1,9 +1,9 @@
 public class SpeedPowerUp : BasePowerUp
 {
-  public float SpeedValue { get; set; }
+	public float SpeedValue { get; set; }
 
-  public SpeedPowerUp()
-  {
-    ArmorValue = 1;
-  }
+	public SpeedPowerUp()
+	{
+		SpeedValue = 1;
+	}
 }

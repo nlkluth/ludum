@@ -11,12 +11,3 @@
 		PowerUpType = PowerUpType.None;
 	}
 }
-
-public enum PowerUpType
-{
-	Weapon,
-	Armor,
-	Special,
-	Speed,
-	None
-}
