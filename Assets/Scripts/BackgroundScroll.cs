@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class BackgroundScroll : MonoBehaviour 
-{	
+public class BackgroundScroll : MonoBehaviour
+{
 	public Transform startPosition;
 	public float speed;
 
