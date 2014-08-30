@@ -905,6 +905,7 @@ GameObject:
   - 54: {fileID: 1497884288}
   - 136: {fileID: 1497884287}
   - 114: {fileID: 1497884291}
+  - 114: {fileID: 1497884292}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -992,6 +993,23 @@ MonoBehaviour:
   overlayCamera: {fileID: 400000, guid: a705fcc01ac6342f8939b62cd757d5b3, type: 2}
   locationX: -4
   locationY: 12
+--- !u!114 &1497884292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497884286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1d030e7cea71743962759c91585c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  boundary:
+    xMin: -7
+    xMax: 8
+    yMin: -6
+    yMax: 6
 --- !u!1001 &1499575163
 Prefab:
   m_ObjectHideFlags: 0
