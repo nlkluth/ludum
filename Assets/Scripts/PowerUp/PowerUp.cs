@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PowerUp : MonoBehaviour
 {
-	public PowerUpType PowerUpType { get; set; }
-	
+	public PowerUpType powerUpType;
+
 	private GameObject player;
 	private PlayerInventory playerInventory;
 	
@@ -24,7 +24,6 @@ public class PowerUp : MonoBehaviour
 	}
 }
 
-[System.Serializable]
 public enum PowerUpType
 {
 	Weapon,
