@@ -6,9 +6,11 @@ public class Enemy : MonoBehaviour {
 	public float speed;
 	public float rotationSpeed;
 	public float maxDistance;
+	public float powerUpCoolDown = 3.0f;
 	
 	private Transform _target;
 	private Transform localTransform;
+	private float _timeStamp = 0.0f;
 	
 	void Awake()
 	{
@@ -32,5 +34,14 @@ public class Enemy : MonoBehaviour {
 		}
 
 		localTransform.Translate (Vector3.right * Time.deltaTime * speed);
+	}
+
+	void OnDestroy()
+	{
+		if (Random.value > 0.8 && Time.time > _timeStamp)
+		{
+			_timeStamp = Time.time + powerUpCoolDown;
+			// instantiate powerup
+		}
 	}
 }
