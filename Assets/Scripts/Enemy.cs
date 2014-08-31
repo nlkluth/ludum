@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour {
 		}
 	}
 	
-	void Update () 
+	void Update() 
 	{
 		if (_target != null && Vector3.Distance(_target.position, localTransform.position) <= maxDistance)
 		{
