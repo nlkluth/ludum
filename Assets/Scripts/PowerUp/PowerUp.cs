@@ -26,7 +26,7 @@ public class PowerUp : MonoBehaviour
 	{
 		if (collider.tag == "Player")
 		{
-			playerInventory.AddPowerUp(this.PowerUpType);
+			playerInventory.AddPowerUp(powerUpType);
 			Destroy(gameObject);
 		}
 	}
