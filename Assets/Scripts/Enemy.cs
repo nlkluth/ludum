@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour {
 			speed = speed / 2;
 		}
 
-		localTransform.Translate (Vector3.right * Time.deltaTime * speed);
+		localTransform.Translate(Vector3.right * Time.deltaTime * speed);
 	}
 
 	void OnDestroy()
