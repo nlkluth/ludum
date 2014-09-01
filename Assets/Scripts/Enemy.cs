@@ -7,6 +7,9 @@ public class Enemy : MonoBehaviour {
 	public float rotationSpeed;
 	public float maxDistance;
 	public float powerUpCoolDown = 3.0f;
+	public Transform speedPowerUp;
+	public Transform weaponPowerUp;
+	public Transform armorPowerUp;
 	
 	private Transform _target;
 	private Transform localTransform;
@@ -41,7 +44,12 @@ public class Enemy : MonoBehaviour {
 		if (Random.value > 0.8 && Time.time > _timeStamp)
 		{
 			_timeStamp = Time.time + powerUpCoolDown;
-			// instantiate powerup
+			DropPowerUp();
 		}
+	}
+
+	private void DropPowerUp()
+	{
+		Instantiate(speedPowerUp, new Vector2 (localTransform.position.x, localTransform.position.y), Quaternion.identity);
 	}
 }
