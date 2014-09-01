@@ -9,11 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 114: {fileID: 11400000}
   - 58: {fileID: 5800000}
   - 61: {fileID: 6100000}
+  - 114: {fileID: 11400000}
   m_Layer: 2
-  m_Name: enemy
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,6 +67,10 @@ MonoBehaviour:
   speed: 1
   rotationSpeed: 1
   maxDistance: 1
+  powerUpCoolDown: 3
+  speedPowerUp: {fileID: 400000, guid: 53b1903b75c4442b4878b9335aa23be0, type: 2}
+  weaponPowerUp: {fileID: 0}
+  armorPowerUp: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
