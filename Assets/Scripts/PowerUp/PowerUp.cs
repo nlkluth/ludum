@@ -17,6 +17,9 @@ public class PowerUp : MonoBehaviour
 		localTransform = transform;
 	}
 
+	void Update()
+	{
+		localTransform.Translate(Vector3.right * Time.deltaTime * speed);
 	}
 	
 	void OnTriggerEnter2D(Collider2D collider)
