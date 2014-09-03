@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 	///public float tilt;
 	public Boundary boundary;
 	
-	void FixedUpdate ()
+	void FixedUpdate()
 	{
 		float moveHorizontal = Input.GetAxis("Horizontal");
 		float moveVertical = Input.GetAxis("Vertical");
