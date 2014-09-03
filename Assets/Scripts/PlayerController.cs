@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
 {
 
 	public float speed;
-	///public float tilt;
 	public Boundary boundary;
 	
 	void FixedUpdate()
@@ -29,7 +28,5 @@ public class PlayerController : MonoBehaviour
 			Mathf.Clamp (rigidbody2D.position.y, boundary.yMin, boundary.yMax),
 			0.0f
 		);
-
-		///rigidbody.rotation = Quaternion.Euler (0.0f, rigidbody.velocity.y * -tilt, 0.0f);
 	}
 }
