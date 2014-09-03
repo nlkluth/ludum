@@ -4,11 +4,11 @@ using System.Collections;
 public class PlayerInventory : MonoBehaviour
 {
 	public int SpecialCount { get; set; }
-	private GameObject _player;
+	public float Speed { get; set; }
 
 	void Awake()
 	{
-		_player = gameObject;
+		Speed = 3;
 	}
 
 	public void AddPowerUp(PowerUpType powerUp)
@@ -18,6 +18,11 @@ public class PlayerInventory : MonoBehaviour
 		      	SpecialCount++;
 			return;
 		}
-		return;
+
+
+		if (powerUp == PowerUpType.Speed)
+		{
+			Speed++;
+		}
 	}
 }
