@@ -16,7 +16,6 @@ public class PlayerInventory : MonoBehaviour
 		if (powerUp == PowerUpType.Special)
     		{
 		      	SpecialCount++;
-			return;
 		}
 
 
