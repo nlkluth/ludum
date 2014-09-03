@@ -10,9 +10,13 @@ public class Boundary
 
 public class PlayerController : MonoBehaviour 
 {
-
-	public float speed;
 	public Boundary boundary;
+	private PlayerInventory playerInventory;
+
+	void Awake()
+	{
+		playerInventory = gameObject.GetComponent<PlayerInventory>();
+	}
 	
 	void FixedUpdate()
 	{
@@ -20,7 +24,7 @@ public class PlayerController : MonoBehaviour
 		float moveVertical = Input.GetAxis("Vertical");
 
 		Vector3 movement = new Vector3 (moveHorizontal, moveVertical, 0.0f);
-		rigidbody2D.velocity = movement * speed;
+		rigidbody2D.velocity = movement * playerInventory.Speed;
 
 		rigidbody2D.position = new Vector3
 		(
