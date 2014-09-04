@@ -21,7 +21,7 @@ public class PlayerInventory : MonoBehaviour
 
 		if (powerUp == PowerUpType.Speed)
 		{
-			Speed++;
+			Speed+= 0.2;
 		}
 	}
 }
