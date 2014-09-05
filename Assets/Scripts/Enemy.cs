@@ -20,6 +20,11 @@ public class Enemy : MonoBehaviour {
 		localTransform = transform;
 	}
 
+	void Start()
+	{
+		speed = Random.Range(1, speed);
+	}
+
 	void OnTriggerEnter2D(Collider2D collider)
 	{
 		if (collider.tag == "Player")
