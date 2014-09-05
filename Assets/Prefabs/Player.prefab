@@ -12,8 +12,8 @@ GameObject:
   - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -85,10 +85,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundary:
-    xMin: 0
-    xMax: 0
-    yMin: 0
-    yMax: 0
+    xMin: -7
+    xMax: 8
+    yMin: -6
+    yMax: 6
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
