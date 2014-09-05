@@ -3,8 +3,8 @@ using System.Collections;
 
 public class EnemySpawn : MonoBehaviour 
 {
-	public GameObject Enemy;
-	public Vector3 sawnValues; 
+	public GameObject EnemyPrefab;
+	public Vector3 spawnValues; 
 	
 	public float enemyStartWait; 
 	public float enemySpawnWait; 
@@ -24,8 +24,9 @@ public class EnemySpawn : MonoBehaviour
 		{
 			for (int i = 0; i < enemyWaveCount; i++)
 			{
-				Vector3 spawnPosition = new Vector3(Random.Range());
+				Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z));
 				Quaternion spawnRotation = Quaternion.identity;
+				Instantiate(EnemyPrefab, spawnPosition, spawnRotation);
 				yield return new WaitForSeconds(enemySpawnWait);
 			}
 			
