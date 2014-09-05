@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dba07ff367f62407d97132a194a7fda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 0}
+  EnemyPrefab: {fileID: 100000, guid: 4614b16cb133846298f6a06ae4cdc54e, type: 2}
   spawnValues: {x: -45, y: 7, z: 0}
   enemyStartWait: 1
   enemySpawnWait: 1
@@ -470,7 +470,7 @@ Transform:
   - {fileID: 1361043888}
   - {fileID: 1651305406}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &772788127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,7 +640,7 @@ Transform:
   - {fileID: 180035675}
   - {fileID: 2015769441}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1001 &1294988086
 Prefab:
   m_ObjectHideFlags: 0
@@ -1033,7 +1033,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!114 &1497884291
 MonoBehaviour:
   m_ObjectHideFlags: 0
