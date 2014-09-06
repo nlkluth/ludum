@@ -11,11 +11,25 @@ public class Boundary
 public class PlayerController : MonoBehaviour 
 {
 	public Boundary boundary;
+	public float fireDelay;
+	public float fireRate;
+	public GameObject cannonball;
+	public Transform shotSpawn;
+
 	private PlayerInventory playerInventory;
 
 	void Awake()
 	{
 		playerInventory = gameObject.GetComponent<PlayerInventory>();
+	}
+
+	void Update()
+	{
+		if (Input.GetButton("Fire1") && Time.time > fireDelay)
+		{
+			fireDelay = Time.time + fireRate;
+			Instantiate(cannonball, shotSpawn.position, shotSpawn.rotation);
+		}
 	}
 	
 	void FixedUpdate()
