@@ -5,10 +5,15 @@ public class PlayerInventory : MonoBehaviour
 {
 	public int SpecialCount { get; set; }
 	public float Speed { get; set; }
+	public int WeaponPower { get; set; }
+	public float WeaponSpeed { get; set; }
 
 	void Awake()
 	{
+		SpecialCount = 0;
 		Speed = 3;
+		WeaponPower = 1;
+		WeaponSpeed = 1;
 	}
 
 	public void AddPowerUp(PowerUpType powerUp)
