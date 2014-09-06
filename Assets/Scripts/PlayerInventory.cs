@@ -20,6 +20,11 @@ public class PlayerInventory : MonoBehaviour
 	{
 		if (powerUp == PowerUpType.Special)
     		{
+			if (SpecialCount > 3) 
+			{
+				return;
+			}
+
 		      	SpecialCount++;
 		}
 
