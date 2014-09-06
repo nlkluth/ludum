@@ -28,10 +28,36 @@ public class PlayerInventory : MonoBehaviour
 		      	SpecialCount++;
 		}
 
+		if (powerUp == PowerUpType.Weapon)
+		{
+			UpdateWeaponPower();
+		}
 
 		if (powerUp == PowerUpType.Speed)
 		{
 			Speed+= 0.2f;
 		}
+	}
+
+	private void UpdateWeaponPower()
+	{
+		if (WeaponPower % 10 == 0)
+		{
+			AddNewWeaponClass();
+			return;
+		}
+
+		if (WeaponPower % 2 == 0)
+		{
+			WeaponSpeed += 0.2f;
+			return;
+		}
+
+		WeaponPower += 1;
+	}
+
+	private void AddNewWeaponClass()
+	{
+		return;
 	}
 }
