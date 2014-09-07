@@ -30,11 +30,6 @@ public class PowerUp : MonoBehaviour
 			Destroy(gameObject);
 		}
 	}
-
-	void OnBecameInvisible()
-	{
-		Destroy(gameObject);
-	}
 }
 
 public enum PowerUpType
