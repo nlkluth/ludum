@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour {
 	private Transform _target;
 	private Transform localTransform;
 	private float _timeStamp = 0.0f;
+	private bool isQuitting = false;
 	
 	void Awake()
 	{
@@ -53,8 +54,16 @@ public class Enemy : MonoBehaviour {
 		}
 	}
 
+	void OnApplicationQuit()
+	{
+		isQuitting = true;
+	}
+
 	private void DropPowerUp()
 	{
-		Instantiate(speedPowerUp, new Vector2 (localTransform.position.x, localTransform.position.y), Quaternion.identity);
+		if (!isQuitting)
+		{
+			Instantiate(speedPowerUp, new Vector2(localTransform.position.x, localTransform.position.y), Quaternion.identity);
+		}
 	}
 }
