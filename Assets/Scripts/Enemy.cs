@@ -59,6 +59,11 @@ public class Enemy : MonoBehaviour {
 		isQuitting = true;
 	}
 
+	public void TakeDamage()
+	{
+		return;
+	}
+
 	private void DropPowerUp()
 	{
 		if (!isQuitting)
