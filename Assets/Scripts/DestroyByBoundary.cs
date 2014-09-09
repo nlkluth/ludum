@@ -5,7 +5,7 @@ public class DestroyByBoundary : MonoBehaviour
 {
 	void OnTriggerExit2D(Collider2D collider)
 	{
-		if (transform.parent.gameObject)
+		if (collider.transform.parent != null && collider.transform.parent.gameObject != null)
 		{
 			Destroy(collider.transform.parent.gameObject);
 			return;
