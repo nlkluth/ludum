@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DestroyByContact : MonoBehaviour 
 {
-	public Enemy enemy;
+	private Enemy enemy;
 
 	void Awake()
 	{
