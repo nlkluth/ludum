@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour {
 
 	public void TakeDamage()
 	{
-		return;
+		Destroy(gameObject);
 	}
 
 	private void DropPowerUp()
