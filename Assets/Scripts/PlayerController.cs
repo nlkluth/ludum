@@ -28,7 +28,8 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetButton("Fire1") && Time.time > fireDelay)
 		{
 			fireDelay = Time.time + fireRate;
-			Instantiate(cannonball, shotSpawn.position, shotSpawn.rotation);
+			GameObject shot = Instantiate(cannonball, shotSpawn.position, shotSpawn.rotation) as GameObject;
+			shot.transform.Translate(Vector3.up);
 		}
 	}
 	
