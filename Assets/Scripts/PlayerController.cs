@@ -15,9 +15,11 @@ public class PlayerController : MonoBehaviour
 	public float fireRate;
 
 	private PlayerInventory playerInventory;
+	private Cannons cannons;
 
 	void Awake()
 	{
+		cannons = gameObject.GetComponentInChildren<Cannons>();
 		playerInventory = gameObject.GetComponent<PlayerInventory>();
 	}
 
@@ -26,7 +28,7 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetButton("Fire1") && Time.time > fireDelay)
 		{
 			fireDelay = Time.time + fireRate;
-			Cannonball.CreateCannonball();
+			cannons.CreateCannonball();
 		}
 	}
 	
