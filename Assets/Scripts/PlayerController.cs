@@ -13,8 +13,6 @@ public class PlayerController : MonoBehaviour
 	public Boundary boundary;
 	public float fireDelay;
 	public float fireRate;
-	public GameObject cannonball;
-	public Transform shotSpawn;
 
 	private PlayerInventory playerInventory;
 
@@ -28,7 +26,7 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetButton("Fire1") && Time.time > fireDelay)
 		{
 			fireDelay = Time.time + fireRate;
-			Instantiate(cannonball, shotSpawn.position, shotSpawn.rotation);
+			Cannonball.CreateCannonball();
 		}
 	}
 	
