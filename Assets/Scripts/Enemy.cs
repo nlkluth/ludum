@@ -68,6 +68,19 @@ public class Enemy : MonoBehaviour {
 	{
 		if (!isQuitting)
 		{
+			var chance = Random.value; //TODO: do this better
+			var powerup = speedPowerUp;
+
+			if (chance > 0 && chance <= 0.3)
+			{	
+				powerup = weaponPowerUp;
+			}
+
+			if (chance > 0.3 && chance <= 0.6)
+			{
+				powerup = armorPowerUp;
+			}
+
 			Instantiate(speedPowerUp, new Vector2(localTransform.position.x, localTransform.position.y), Quaternion.identity);
 		}
 	}
