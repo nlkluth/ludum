@@ -11,9 +11,9 @@ public class Boundary
 public class PlayerController : MonoBehaviour 
 {
 	public Boundary boundary;
-	public float fireDelay;
 	public float fireRate;
 
+	private float fireDelay = 0;
 	private PlayerInventory playerInventory;
 	private Cannons cannons;
 
