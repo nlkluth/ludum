@@ -3,7 +3,9 @@ using System.Collections;
 
 public class Cannons : MonoBehaviour 
 {
-	private Transform[] spawnPositions;
+	public Transform[] spawnPositions;
+	public GameObject cannonball;
+	
 	private int shotCount = 0;
 
 	public void CreateCannonball()
@@ -14,6 +16,6 @@ public class Cannons : MonoBehaviour
 			shotCount = 0;
 		}
 		
-		Instantiate(gameObject, spawnPositions[shotCount].position, spawnPositions[shotCount].rotation);
+		Instantiate(cannonball, spawnPositions[shotCount].position, spawnPositions[shotCount].rotation);
 	}
 }
