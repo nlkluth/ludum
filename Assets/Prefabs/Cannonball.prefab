@@ -54,7 +54,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Radius: .5
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
@@ -68,13 +68,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b2b0239da17427c91af9cdb14b99c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPositions:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
