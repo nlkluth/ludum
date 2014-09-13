@@ -22,9 +22,9 @@ public class Cannons : MonoBehaviour
 			shotCount = 0;
 		}
 
-		if (Input.mousePosition > parentTransform)
+		if (Input.mousePosition.y > parentTransform.position.y)
 		{
-			Debug.Log ("UP!")
+			Debug.Log ("UP!");
 		}
 		
 		Instantiate(cannonball, spawnPositions[shotCount].position, spawnPositions[shotCount].rotation);
