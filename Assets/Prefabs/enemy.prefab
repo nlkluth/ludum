@@ -114,7 +114,7 @@ MonoBehaviour:
   maxDistance: 1
   powerUpCoolDown: 3
   speedPowerUp: {fileID: 400000, guid: 53b1903b75c4442b4878b9335aa23be0, type: 2}
-  weaponPowerUp: {fileID: 0}
+  weaponPowerUp: {fileID: 400000, guid: 4d4927a78fe67417d9bfa5923a8e9c01, type: 2}
   armorPowerUp: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
