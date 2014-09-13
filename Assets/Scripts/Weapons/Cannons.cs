@@ -8,9 +8,11 @@ public class Cannons : MonoBehaviour
 	
 	private int shotCount = 0;
 	private Transform parentTransform;
+	private Camera camera;
 
 	private void Awake()
 	{
+		camera = GameObject.FindGameObjectWithTag("MainCamera").camera;
 		parentTransform = gameObject.GetComponentInParent<Transform>();
 	}
 
@@ -22,7 +24,9 @@ public class Cannons : MonoBehaviour
 			shotCount = 0;
 		}
 
-		if (Input.mousePosition.y > parentTransform.position.y)
+		var position = camera.ScreenToWorldPoint(Input.mousePosition);
+
+		if (position.y > parentTransform.position.y)
 		{
 			Debug.Log ("UP!");
 		}
