@@ -20,6 +20,6 @@ public class Cannonball : MonoBehaviour
 	private void Fire()
 	{
 		shotCount++;
-		rigidbody2D.velocity = transform.up * Speed;
+//		rigidbody2D.velocity = transform.up * Speed;
 	}
 }

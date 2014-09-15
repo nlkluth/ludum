@@ -25,12 +25,14 @@ public class Cannons : MonoBehaviour
 		}
 
 		var position = camera.ScreenToWorldPoint(Input.mousePosition);
+		var shot = Instantiate(cannonball, spawnPositions[shotCount].position, spawnPositions[shotCount].rotation) as GameObject;
 
 		if (position.y > parentTransform.position.y)
 		{
-			Debug.Log ("UP!");
+			shot.rigidbody2D.velocity = transform.up * 2f;
+			return;
 		}
-		
-		Instantiate(cannonball, spawnPositions[shotCount].position, spawnPositions[shotCount].rotation);
+
+		shot.rigidbody2D.velocity = transform.right * 2f;
 	}
 }
