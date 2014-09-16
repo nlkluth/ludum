@@ -4,11 +4,13 @@ using System.Collections;
 public class Cannonball : MonoBehaviour 
 {
 	public float Speed { get; set; }
-	
-	private static int shotCount = 0;
+	private GameObject player;
+	private Cannons cannons;
 
 	void Awake()
 	{
+		player = GameObject.FindGameObjectWithTag("Player");
+		cannons = player.GetComponentInChildren<Cannons>();
 		Speed = 12f;
 	}
 	
@@ -19,7 +21,12 @@ public class Cannonball : MonoBehaviour
 
 	private void Fire()
 	{
-		shotCount++;
-//		rigidbody2D.velocity = transform.up * Speed;
+		if (cannons.ShotCount % 2 == 1)
+		{
+			rigidbody2D.velocity = transform.up * Speed;
+			return;
+		}
+
+		rigidbody2D.velocity = -(transform.up) * Speed;
 	}
 }
