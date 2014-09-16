@@ -1357,7 +1357,6 @@ MonoBehaviour:
     xMax: 8
     yMin: -6
     yMax: 6
-  fireRate: 5
 --- !u!114 &1497884293
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class PlayerInventory : MonoBehaviour
 		SpecialCount = 0;
 		Speed = 3;
 		WeaponPower = 1;
-		WeaponSpeed = 1;
+		WeaponSpeed = 5;
 	}
 
 	public void AddPowerUp(PowerUpType powerUp)
@@ -49,7 +49,7 @@ public class PlayerInventory : MonoBehaviour
 
 		if (WeaponPower % 2 == 0)
 		{
-			WeaponSpeed += 0.2f;
+			WeaponSpeed -= 0.2f;
 			return;
 		}
 

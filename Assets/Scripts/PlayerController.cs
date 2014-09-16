@@ -11,7 +11,6 @@ public class Boundary
 public class PlayerController : MonoBehaviour 
 {
 	public Boundary boundary;
-	public float fireRate;
 
 	private float fireDelay = 0;
 	private PlayerInventory playerInventory;
@@ -27,7 +26,7 @@ public class PlayerController : MonoBehaviour
 	{
 		if (Input.GetButton("Fire1") && Time.time > fireDelay)
 		{
-			fireDelay = Time.time + fireRate;
+			fireDelay = Time.time + playerInventory.WeaponSpeed;
 			cannons.CreateCannonball();
 		}
 	}
