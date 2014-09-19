@@ -32,6 +32,7 @@ public class Enemy : MonoBehaviour {
 		{
 			_target = collider.transform;
 			speed = speed / 2;
+			Attack(collider);
 		}
 	}
 	
@@ -62,6 +63,11 @@ public class Enemy : MonoBehaviour {
 	public void TakeDamage()
 	{
 		Destroy(gameObject);
+	}
+
+	private void Attack(Collider2D player)
+	{
+
 	}
 
 	private void DropPowerUp()
